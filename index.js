@@ -51,7 +51,7 @@ async function loadCharacters(url) {
 
             const name= document.createElement("span")
             name.className= "character-details"
-            name.innerText= `Nome : $(character.name)`
+            name.innerText= `Nome : ${character.name}`
 
             const characterHeight= document.createElement("span")
             characterHeight.className= "character-details"
@@ -91,6 +91,7 @@ async function loadCharacters(url) {
         backButton.disabled= !responseJson.previous
 
         backButton.style.visibility= responseJson.previous? "visible" : "hidden"
+        nextButton.style.visibility= responseJson.next? "visible" : "hidden"
 
         currentPageUrl=url 
 
